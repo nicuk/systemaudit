@@ -1,0 +1,33 @@
+{
+  "name": "systemscope",
+  "version": "0.1.0",
+  "description": "Open-source codebase scanner: file structure analysis, dependency extraction, complexity metrics, and health scoring for any GitHub repository.",
+  "main": "src/scanner/index.ts",
+  "type": "module",
+  "scripts": {
+    "scan": "tsx src/cli.ts",
+    "build": "tsc",
+    "typecheck": "tsc --noEmit"
+  },
+  "keywords": [
+    "codebase-analysis",
+    "code-audit",
+    "dependency-graph",
+    "static-analysis",
+    "architecture-mapping",
+    "technical-debt",
+    "code-health",
+    "github-api",
+    "scanner"
+  ],
+  "author": "nicuk",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nicuk/SystemScope"
+  },
+  "dependencies": {
+    "tsx": "^4.0.0",
+    "typescript": "^5.0.0"
+  }
+}
