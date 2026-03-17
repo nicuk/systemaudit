@@ -1,53 +1,141 @@
 <div align="center">
 
-# SystemScope
+# SystemAudit
 
-**Understand any codebase in minutes, not months.**
+### Know exactly what's in your codebase — before it costs you.
 
-Open-source scanner that maps file structure, extracts dependencies, measures complexity,
-and scores project health for any GitHub repository. The foundation for [SystemScope Web](https://systemscope.dev).
+**Paste a GitHub link. Get a full system health report in under 3 minutes.**
+Architecture map, hidden risks, technical debt, and a prioritized fix plan — no developer needed.
 
+[![Try Free Scan](https://img.shields.io/badge/Try_Free_Scan-systemaudit.dev-7c3aed?style=for-the-badge)](https://systemaudit.dev)
+&nbsp;&nbsp;
 [![MIT License](https://img.shields.io/badge/license-MIT-violet.svg)](LICENSE)
-[![TypeScript](https://img.shields.io/badge/TypeScript-5.0+-blue.svg)](https://www.typescriptlang.org/)
-[![GitHub](https://img.shields.io/github/stars/nicuk/SystemScope?style=social)](https://github.com/nicuk/SystemScope)
-
-[Run the Web App](https://systemscope.dev) · [View Sample Output](examples/sample-output.md) · [Report Bug](https://github.com/nicuk/SystemScope/issues)
 
 </div>
 
 ---
 
-## The Problem
+## Why This Exists
 
-Developers spend **60-70% of their time** just understanding existing code. Teams ship, refactor, and onboard slowly because nobody has a clear picture of the entire system.
+Most founders, CTOs, and investors have no idea what's actually inside their codebase.
 
-This gets worse with AI-generated code. You can build faster than ever — but if you don't know what you built, you can't maintain it, scale it, or explain it to investors.
+- You're paying developers but can't tell if they're building on a solid foundation or a house of cards
+- You're about to acquire or invest in a tech company but have no way to verify the code quality
+- Your AI tools are generating code faster than anyone can review it
+- Your team says "it works" but nobody can explain the architecture to a non-technical stakeholder
 
-**SystemScope fixes that.**
+**A traditional code audit costs $5,000–$16,000 and takes 1–3 weeks.**
+SystemAudit gives you the same core insights in under 3 minutes.
 
-## What It Does
+---
 
-Paste a GitHub URL. Get a complete structural analysis.
+## What You Get
 
-| Feature | Description |
+| What You See | Why It Matters |
 |---|---|
-| **File Structure Analysis** | Full file tree with language detection for 50+ languages |
-| **Language Breakdown** | LOC counts per language with visual distribution |
-| **Dependency Extraction** | Production and dev dependencies from `package.json`, `requirements.txt`, `Cargo.toml`, `go.mod` |
-| **Complexity Metrics** | File-level complexity scoring (low/medium/high), largest file identification |
-| **Health Scoring** | Checks for README, license, CI/CD, tests, linter, TypeScript, Docker, env examples |
-| **Structure Analysis** | Directory depth, entry points, config files, test directories |
+| **System Architecture Map** | Visual diagram of how every piece of your system connects — finally see the full picture |
+| **Risk Assessment** | Know which parts of your system are most likely to break, ranked by severity |
+| **Technical Debt Report** | See exactly where shortcuts were taken, with cost-to-fix estimates |
+| **AI Readiness Score** | Find out if your codebase is structured for safe AI-assisted development |
+| **Health Score** | One number that tells you if your system has tests, security, documentation, and CI/CD |
+| **Prioritized Fix Plan** | A step-by-step action list your dev team can start on immediately |
 
-## Quick Start
+---
 
-### CLI (scan any repo from your terminal)
+## How It Works
+
+```
+1. Go to systemaudit.dev
+2. Paste any GitHub repository URL
+3. Get your full report in under 3 minutes
+```
+
+That's it. No setup. No install. No developer required.
+
+---
+
+## Who It's For
+
+### Founders & CEOs
+> "I hired a dev team 6 months ago. Are they building something solid, or am I burning cash?"
+
+Scan your repo. See the architecture, risks, and health score. Make informed decisions without needing to read code.
+
+### Investors & Acquirers
+> "We're doing due diligence on a tech company. How do we evaluate their codebase?"
+
+Get an instant technical overview — architecture quality, dependency risks, and maintenance burden — in minutes instead of weeks.
+
+### CTOs & Tech Leads
+> "We ship fast but I'm not sure what we've accumulated in technical debt."
+
+Run periodic scans to track system health over time. Catch problems before they become emergencies.
+
+### Teams Using AI Code Tools
+> "We're generating code with AI but we have no idea if the output is maintainable."
+
+SystemAudit checks whether AI-generated code follows good structure, has proper testing, and won't create long-term problems.
+
+---
+
+## Pricing
+
+| | Free | Full Audit |
+|---|---|---|
+| **Price** | $0 | ~~$2,500~~ **$99** (launch offer) |
+| Public repos | ✅ | ✅ |
+| Private repos | — | ✅ |
+| Architecture map | Preview | Full interactive diagram |
+| Risk assessment | Blurred | Full detail with severity ranking |
+| Technical debt report | — | Complete with fix estimates |
+| Multi-repo analysis | — | ✅ |
+| Exportable PDF | — | ✅ |
+| Remediation roadmap | — | ✅ |
+
+<div align="center">
+
+[![Get Your Audit](https://img.shields.io/badge/Get_Your_Audit-$99_Launch_Offer-7c3aed?style=for-the-badge)](https://systemaudit.dev)
+
+</div>
+
+---
+
+## Is My Code Safe?
+
+**Yes. 100%.**
+
+- Your code is read through GitHub's official API — read-only access
+- Nothing is stored, saved, or cached after the scan
+- Your code is never shared with anyone or used to train AI models
+- Only you see the results
+
+---
+
+## What It Scans
+
+SystemAudit works with **50+ programming languages** including TypeScript, JavaScript, Python, Go, Rust, Java, Kotlin, Swift, C#, C++, Ruby, PHP, and more. It analyzes:
+
+- File structure and organization
+- All production and dev dependencies
+- Code complexity per file
+- Test coverage and CI/CD setup
+- Security configuration and secrets hygiene
+- Documentation quality
+
+---
+
+## Open Source Foundation
+
+This repository contains the **open-source scanner engine** that powers [systemaudit.dev](https://systemaudit.dev). It handles file analysis, dependency extraction, complexity scoring, and health checks.
+
+The web app adds AI-powered analysis on top: architecture diagrams, risk scoring, executive summaries, and the prioritized fix plan.
+
+<details>
+<summary><strong>Developer Quick Start (CLI)</strong></summary>
 
 ```bash
-# Clone the repo
-git clone https://github.com/nicuk/SystemScope.git
-cd SystemScope
-
-# Install dependencies
+git clone https://github.com/nicuk/systemaudit.git
+cd systemaudit
 npm install
 
 # Scan a repository
@@ -57,7 +145,10 @@ npm run scan -- https://github.com/vercel/next.js
 npm run scan -- https://github.com/vercel/next.js --json
 ```
 
-### As a Library (import into your project)
+</details>
+
+<details>
+<summary><strong>Use as a Library</strong></summary>
 
 ```typescript
 import { parseGitHubUrl, fetchRepoInfo, fetchRepoTree, fetchKeyFiles } from "./src/github";
@@ -69,101 +160,47 @@ const files = await fetchRepoTree(parsed.owner, parsed.name, repo.defaultBranch)
 const contents = await fetchKeyFiles(parsed.owner, parsed.name, files);
 
 const scan = buildScanResult(repo, files, contents, packageData);
-// scan.metrics, scan.dependencies, scan.structure, scan.healthIndicators
 ```
 
-## Sample Output
+</details>
 
-```
-============================================================
-  vercel/next.js
-  The React Framework
-============================================================
-
-  Files:         4,832
-  Lines of Code: 487,291
-  Dependencies:  142
-  Max Depth:     12
-
-  Languages:
-    TypeScript     72.3%  ████████████████████████  (3,201 files)
-    JavaScript     14.1%  █████                     (892 files)
-    CSS             4.8%  ██                        (156 files)
-    Rust            3.2%  █                         (89 files)
-
-  Health Check:
-    ✓ README    ✓ License    ✓ CI/CD
-    ✓ Tests     ✓ Linter     ✓ TypeScript
-    ✓ Docker    ✗ Env Example
-
-  Largest Files:
-    packages/next/src/server/next-server.ts           2,847 LOC  [high]
-    packages/next/src/build/webpack-config.ts         2,312 LOC  [high]
-
-============================================================
-```
-
-[See full sample output →](examples/sample-output.md)
-
-## Supported Languages
-
-SystemScope detects **50+ languages** including:
-
-TypeScript, JavaScript, Python, Go, Rust, Java, Kotlin, Swift, C#, C++, C, Ruby, PHP, Vue, Svelte, Dart, Scala, Elixir, Erlang, Zig, Lua, Shell, SQL, GraphQL, Terraform, and more.
-
-## Architecture
+<details>
+<summary><strong>Architecture</strong></summary>
 
 ```
 src/
 ├── scanner/
-│   ├── index.ts          # Core scan logic: metrics, dependencies, structure, health
-│   └── languages.ts      # Language detection, file classification, pattern matching
-├── github.ts             # GitHub REST API client: repo info, tree, file contents
+│   ├── index.ts          # Core scan logic
+│   └── languages.ts      # Language detection and classification
+├── github.ts             # GitHub API client
 ├── types/
-│   └── index.ts          # TypeScript interfaces for all data structures
+│   └── index.ts          # TypeScript interfaces
 └── cli.ts                # CLI entry point
 ```
 
-The scanner is designed as a **standalone module** with zero dependencies on any AI provider, database, or framework. It produces structured JSON that can be consumed by any downstream tool.
+The scanner is a standalone module with zero dependencies on any AI provider, database, or framework. It produces structured JSON for any downstream consumer.
 
-## SystemScope Web
+</details>
 
-The open-source scanner is the foundation. [**SystemScope Web**](https://systemscope.dev) adds an AI analysis layer on top:
-
-| Scanner (this repo) | Web App (systemscope.dev) |
-|---|---|
-| File structure analysis | Everything in the scanner, plus: |
-| Language breakdown | AI-generated executive summary |
-| Dependency extraction | Architecture diagram (Mermaid.js) |
-| Complexity metrics | Risk assessment with severity ranking |
-| Health scoring | Technical debt inventory with fix estimates |
-| | AI Readiness Score (0-100) |
-| | Prioritized action plan |
-| **Free, open source** | **Free for public repos** |
-
-## Use Cases
-
-- **Onboarding** — New to a codebase? Scan it first. Understand the structure, languages, and dependencies before reading a single line of code.
-- **Due Diligence** — Evaluating a project for investment or acquisition? Get an instant structural overview.
-- **Technical Debt Tracking** — Run periodic scans to monitor complexity growth, dependency health, and project hygiene.
-- **AI Governance** — Assess how much AI-generated code exists and whether the system is structured for safe AI modification.
-- **Documentation** — Auto-generate a structural snapshot as a starting point for architecture docs.
-
-## Environment Variables
+<details>
+<summary><strong>Environment Variables</strong></summary>
 
 | Variable | Required | Description |
 |---|---|---|
-| `GITHUB_TOKEN` | No | GitHub personal access token. Increases rate limit from 60 to 5,000 requests/hour. Required for private repos. |
+| `GITHUB_TOKEN` | No | GitHub personal access token. Increases rate limit from 60 to 5,000 req/hr. Required for private repos. |
+
+</details>
+
+---
 
 ## Contributing
 
-Contributions welcome. Areas where help is needed:
+Contributions welcome. See [open issues](https://github.com/nicuk/systemaudit/issues) or start with:
 
-- [ ] Support for `requirements.txt`, `Cargo.toml`, `go.mod` dependency parsing
-- [ ] More language-specific complexity heuristics
-- [ ] Git history analysis (commit frequency, bus factor)
-- [ ] Support for GitLab and Bitbucket APIs
-- [ ] Interactive terminal output with color
+- Dependency parsing for more ecosystems (Cargo.toml, go.mod, etc.)
+- Language-specific complexity heuristics
+- Git history analysis (commit frequency, bus factor)
+- GitLab and Bitbucket API support
 
 ## License
 
@@ -175,6 +212,6 @@ Contributions welcome. Areas where help is needed:
 
 **Built by [nicuk](https://github.com/nicuk)** — AI architect building tools for codebase clarity.
 
-[Run SystemScope Web →](https://systemscope.dev)
+[**Try SystemAudit Free →**](https://systemaudit.dev)
 
 </div>
