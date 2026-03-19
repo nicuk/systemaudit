@@ -61,9 +61,9 @@ Here's what a real report looks like — every section written for business deci
 
 | Risk | Severity | Cost to Fix | Cost if Ignored |
 |---|---|---|---|
-| Customer conversations stored without encryption | Critical | $3,600 – $8,000 | Enterprise deals worth $50K+ rejected during security reviews |
-| User access controls can fail silently | High | $2,400 – $4,800 | Cross-company data access liability, 3-4x support ticket increase |
-| Code too complex to modify quickly | High | $12,000 – $24,000 | 50-75% development slowdown over next year |
+| Customer conversations stored without encryption | Critical | $800 – $1,500 (1-2 days) | Risk of failing enterprise security reviews |
+| User access controls can fail silently | High | $800 – $2,400 (1-3 days) | Increased support tickets, potential data access issues |
+| Code too complex to modify quickly | High | $2,500 – $5,000 (1-2 weeks) | Feature delivery slows as complexity compounds |
 
 Each risk includes **who it affects**, **what happens if you ignore it**, and **exactly what to fix**.
 
@@ -91,9 +91,9 @@ Each dimension includes evidence from your actual code, business impact, specifi
 
 | Priority | Timeline | Cost | What It Fixes |
 |---|---|---|---|
-| **Urgent** — Fix Now | 1-2 weeks | $6,000 – $16,000 | Security issues blocking enterprise sales |
-| **Recommended** — Next Sprint | 3-4 weeks | $18,000 – $32,000 | Code complexity causing development slowdowns |
-| **Optional** — When Ready | 1-2 weeks | $6,000 – $16,000 | Monitoring and automated quality checks |
+| **Urgent** — Fix Now | 3-5 days | $2,000 – $5,000 | Security issues that could block enterprise sales |
+| **Recommended** — Next Sprint | 1-2 weeks | $4,000 – $8,000 | Code complexity causing development slowdowns |
+| **Optional** — When Ready | 2-4 days | $1,500 – $4,000 | Monitoring and automated quality checks |
 
 Plus: **Quick wins** your team can start this week, and **who you need** (existing team vs. outside help).
 
